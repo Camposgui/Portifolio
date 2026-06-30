@@ -52,7 +52,7 @@ RESULTADO
 A consulta retorna uma base consolidada por competência, empresa, filial,
 centro de custo, plano de contas e fornecedor, contendo os valores pagos e em
 aberto, pronta para análises financeiras, acompanhamento da execução
-orçamentária e construção de dashboards no Power BI.
+orçamentária e construção do dashboards de resultado de refeitórios no Power BI.
 ===============================================================================
 */
 
