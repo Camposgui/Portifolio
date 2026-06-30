@@ -1,3 +1,61 @@
+/*
+===============================================================================
+PROJETO: Acompanhamento de Despesas Pagas e em Aberto
+DESCRIÇÃO:
+Consulta responsável pela consolidação das despesas realizadas, utilizada na
+construção do dashboard financeiro em Power BI para acompanhamento da execução
+orçamentária.
+
+REGRAS DE NEGÓCIO
+-------------------------------------------------------------------------------
+• Considera apenas registros compreendidos entre o início do ano atual menos
+  dois anos e o último dia do mês atual.
+• Relaciona as tabelas dimensionais para enriquecer a base com descrições
+  legíveis ao usuário.
+• Filtra apenas os centros de custo utilizados na análise.
+• Desconsidera centros pertencentes ao grupo "1.1.2%".
+• Consolida os valores pagos e em aberto por período e dimensões de negócio.
+• Padroniza os textos utilizando UPPER() para manter consistência visual.
+• Converte os valores financeiros para BIGINT após a agregação.
+
+TRANSFORMAÇÕES
+-------------------------------------------------------------------------------
+1. Conversão da competência (AAAAMM) para o formato MM/AAAA.
+2. Padronização de textos utilizando UPPER().
+3. Concatenação de códigos e descrições para facilitar a leitura nos
+   dashboards.
+4. Junção com as dimensões de Filial, Centro de Custo, Plano de Contas e
+   Fornecedor.
+5. Agregação dos valores pagos (vl_pago) e em aberto (vl_aberto).
+6. Conversão dos valores agregados para BIGINT.
+7. Consolidação dos registros através do GROUP BY.
+
+TABELAS UTILIZADAS
+-------------------------------------------------------------------------------
+• gold.financeiro.f_dre_acompanhamento_despesa
+      Base fato contendo os lançamentos financeiros realizados.
+
+• gold.venda.dim_filial
+      Dimensão responsável pelas informações das filiais.
+
+• gold.financeiro.dim_centro_custos
+      Dimensão contendo a estrutura organizacional dos centros de custo.
+
+• gold.financeiro.dim_plano_contas
+      Dimensão contendo a classificação contábil das despesas.
+
+• gold.venda.dim_fornecedor
+      Dimensão responsável pelas informações dos fornecedores.
+
+RESULTADO
+-------------------------------------------------------------------------------
+A consulta retorna uma base consolidada por competência, empresa, filial,
+centro de custo, plano de contas e fornecedor, contendo os valores pagos e em
+aberto, pronta para análises financeiras, acompanhamento da execução
+orçamentária e construção de dashboards no Power BI.
+===============================================================================
+*/
+
 SELECT 
   DATE_FORMAT(TO_DATE(CAST(OC.nu_competencia AS STRING) || '01', 'yyyyMMdd'), 'MM/yyyy') AS DATA,
   UPPER(OC.id_empresa) as EMPRESA,
