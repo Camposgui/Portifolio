@@ -1,3 +1,4 @@
+  SELECT
   v.id_filial AS FILIAL,
   DATE_FORMAT(v.dt_venda, 'MM/yyyy') AS data_venda,
   f.nome as nome_filial,
