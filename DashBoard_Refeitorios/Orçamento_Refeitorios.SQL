@@ -1,3 +1,50 @@
+/*
+===============================================================================
+PROJETO: Análise de Orçamento de Despesas
+DESCRIÇÃO:
+Consulta responsável pela extração da base de orçamento de despesas utilizada
+na construção do dashboard financeiro em Power BI.
+
+OBJETIVO:
+Consolidar os valores orçados de despesas para o exercício de 2026, realizando
+o enriquecimento dos dados com informações da empresa, aplicando regras de
+qualidade e padronizando os valores para análises posteriores.
+
+REGRAS DE NEGÓCIO
+-------------------------------------------------------------------------------
+• Extrai apenas registros referentes ao ano de 2026.
+• Relaciona cada filial à sua respectiva empresa através da dimensão de filiais.
+• Considera apenas registros com valor orçado válido.
+• Exclui valores nulos ou iguais a zero.
+• Filtra somente os centros de custo de interesse para a análise.
+• Padroniza os valores orçados utilizando COALESCE, ROUND e CAST para BIGINT.
+• Garante a unicidade dos registros por meio do GROUP BY.
+
+TRANSFORMAÇÕES
+-------------------------------------------------------------------------------
+1. LEFT JOIN com a dimensão de filiais para obtenção do id da empresa.
+2. Tratamento de valores nulos utilizando COALESCE().
+3. Arredondamento dos valores com ROUND().
+4. Conversão do orçamento para BIGINT através de CAST().
+5. Aplicação dos filtros de qualidade dos dados.
+6. Remoção de possíveis duplicidades utilizando GROUP BY.
+
+TABELAS UTILIZADAS
+-------------------------------------------------------------------------------
+• gold.financeiro.f_dre_orcamento_despesa
+      Base fato contendo os valores orçados das despesas.
+
+• gold.venda.dim_filial
+      Dimensão responsável pelo relacionamento entre filial e empresa.
+
+RESULTADO
+-------------------------------------------------------------------------------
+A consulta retorna uma base tratada contendo competência, empresa, filial,
+centro de custo, plano de contas, fornecedor e valor orçado, pronta para
+consumo em processos analíticos e dashboards financeiros.
+===============================================================================
+*/
+
 SELECT * 
 FROM (
     SELECT   
