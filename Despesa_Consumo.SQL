@@ -9,13 +9,13 @@ CAST(ROUND(v.qt_venda,0) AS BIGINT) AS QUANTIDADE,
 CAST(ROUND(v.vl_venda_total,0) AS BIGINT) AS VENDA
  
  
-from gold.venda.f_vcl_verba_imposto v
-join GOLD.masterdata.produto p
-  on v.id_produto = p.id
-join gold.masterdata.filial f
-  on v.id_filial = f.id
+FROM gold.venda.f_vcl_verba_imposto v
+JOIN GOLD.masterdata.produto p
+  ON v.id_produto = p.id
+JOIN gold.masterdata.filial f
+  ON v.id_filial = f.id
  
  
-where v.dt_venda >= '2024-12-01'
-  and p.nm_departamento = 'RESTAURANTE'
+WHERE v.dt_venda >= '2024-12-01'
+  AND p.nm_departamento = 'RESTAURANTE'
 AND v.id_produto IN (236808, 229209)
