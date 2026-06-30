@@ -18,7 +18,7 @@ REGRAS DE NEGÓCIO
 • Exclui valores nulos ou iguais a zero.
 • Filtra somente os centros de custo de interesse para a análise.
 • Padroniza os valores orçados utilizando COALESCE, ROUND e CAST para BIGINT.
-• Garante a unicidade dos registros por meio do GROUP BY.
+• Garante o agrupamento dos registros por meio do GROUP BY.
 
 TRANSFORMAÇÕES
 -------------------------------------------------------------------------------
@@ -41,7 +41,8 @@ RESULTADO
 -------------------------------------------------------------------------------
 A consulta retorna uma base tratada contendo competência, empresa, filial,
 centro de custo, plano de contas, fornecedor e valor orçado, pronta para
-consumo em processos analíticos e dashboards financeiros.
+consumo em processos analíticos e dashboards financeiros, no caso desse projeto,
+para o dashboard de resultado de refeitórios.
 ===============================================================================
 */
 
