@@ -14,9 +14,9 @@ Este portfólio reúne projetos de Business Intelligence desenvolvidos com foco 
 
 ---
 
-## Projeto 1 — BI de Custos Operacionais em Restaurantes
+## Projeto 1 — BI de Custos Operacionais em Restaurantes Industriais
 
-Projeto de Business Intelligence desenvolvido em **Power BI com backend em SQL**, voltado ao acompanhamento gerencial de custos operacionais em restaurantes.
+Projeto de Business Intelligence desenvolvido em **Power BI com backend em SQL**, voltado ao acompanhamento gerencial de custos operacionais em restaurantes Industriais.
 
 A solução contempla análises de **per capita**, **orçamento versus realizado**, **desvios por regional**, despesas de matéria-prima, curva ABC de categorias e comparação **Same Store** entre períodos.
 
@@ -34,9 +34,9 @@ Este projeto simula uma solução de BI voltada à gestão executiva, permitindo
 
 ---
 
-## Projeto 3 — Backend Analítico SQL para Dashboard Financeiro de Refeitórios
+## Projeto 3 — Backend Analítico SQL para Dashboard Financeiro de Restaurantes Industriais
 
-Projeto SQL desenvolvido como backend analítico para um dashboard financeiro de refeitórios/restaurantes, com foco no acompanhamento de **orçamento, despesas realizadas, valores pagos, valores em aberto e consumo de matéria-prima**.
+Projeto SQL desenvolvido como backend analítico para um dashboard financeiro de Restaurantes Industriais, com foco no acompanhamento de **orçamento, despesas realizadas, valores pagos, valores em aberto e consumo de matéria-prima**.
 
 As consultas foram construídas sobre uma estrutura analítica em camada `gold`, integrando tabelas fato e dimensões corporativas para enriquecer os dados com informações de filial, empresa, centro de custo, plano de contas, fornecedor e produto.
 
