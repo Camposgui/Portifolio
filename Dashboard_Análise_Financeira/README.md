@@ -60,21 +60,17 @@ Inclui análise de produção, repasse, ticket médio e ranking de desempenho, p
 Este projeto demonstra competências valorizadas em posições de Analista de Dados, Analista de BI e Business Intelligence Analyst:
 
 - Construção de dashboard com foco em tomada de decisão gerencial.
-- Organização visual limpa, executiva e orientada à leitura rápida.
 - Uso de filtros estratégicos para análise multidimensional.
 - Criação de KPIs financeiros relevantes para acompanhamento de performance.
 - Comparação entre receita, custo, glosa e lucratividade.
 - Separação clara entre visão institucional, visão setorial e análise detalhada de receita.
 - Estrutura visual pensada para diferentes níveis de liderança.
-- Backend em SQL, com preparação e organização dos dados antes da camada visual.
-- Design profissional, com navegação lateral, cards executivos e gráficos de fácil interpretação.
 
 ---
 
 ## Competências Demonstradas
 
 - Power BI
-- SQL
 - Modelagem de dados
 - Business Intelligence
 - Análise financeira
@@ -103,6 +99,6 @@ A solução contribui para responder perguntas como:
 
 ## Objetivo no Portfólio
 
-Este projeto foi desenvolvido para demonstrar domínio na construção de soluções completas de BI, desde a organização dos dados em SQL até a criação de dashboards executivos em Power BI.
+Este projeto foi desenvolvido para demonstrar domínio na construção de soluções completas de BI, desde a modelagem dos dados até a criação de dashboards executivos em Power BI.
 
 O foco está em apresentar não apenas habilidades técnicas, mas também capacidade analítica, visão de negócio e entendimento de indicadores relevantes para a gestão financeira.
